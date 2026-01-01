@@ -1,11 +1,18 @@
 <h2>Hola! Gracias.</h2>
 
+<!--* Event Binding - We bind the event of an HTML element to a method defined in the TS file, using parentheses (). -->
+<label>Product Name:</label>
+<input type="text" class="form-control" (input)="onUpdateProductName($event)" />
+<p>{{ enteredValue }}</p>
+
+<br /><br />
 <!--* Property Binding - We bind the property of an HTML element to a variable defined in the TS file, using square brackets []. -->
-<button class="btn btn-secondary" [disabled]="!addProduct">Add Product</button>
+<button class="btn btn-secondary" [disabled]="!addProduct" (click)="onClick()">Add Product</button>
 <br /><br />
 <!-- the property binding and string interpolation can be used interchangeably in some cases like below -->
 <p>{{ addProduct }}</p>
 <p [innerText]="addProduct"></p>
+<p [innerText]="addProductStatus"></p>
 
 <br /><br />
 <div product></div>

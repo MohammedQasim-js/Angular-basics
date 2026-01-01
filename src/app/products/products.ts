@@ -8,9 +8,21 @@ import { ProductComponent } from '../product/product';
 })
 export class ProductsComponent {
   addProduct = true;
+  // greet = 'Hello!';
+  addProductStatus = 'No product added';
+  enteredValue = '';
   constructor() {
     setTimeout(() => {
       this.addProduct = false;
     }, 4000);
+  }
+
+  onClick() {
+    this.addProductStatus = 'Product added!';
+  }
+
+  onUpdateProductName(event: any) {
+    console.log(event);
+    this.enteredValue = (<HTMLInputElement>event.target).value;
   }
 }
