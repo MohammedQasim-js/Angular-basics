@@ -6,4 +6,11 @@ import { ProductComponent } from '../product/product';
   templateUrl: './products.html',
   imports: [ProductComponent],
 })
-export class ProductsComponent {}
+export class ProductsComponent {
+  addProduct = true;
+  constructor() {
+    setTimeout(() => {
+      this.addProduct = false;
+    }, 4000);
+  }
+}

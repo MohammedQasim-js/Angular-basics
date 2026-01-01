@@ -1,5 +1,13 @@
 <h2>Hola! Gracias.</h2>
 
+<!--* Property Binding - We bind the property of an HTML element to a variable defined in the TS file, using square brackets []. -->
+<button class="btn btn-secondary" [disabled]="!addProduct">Add Product</button>
+<br /><br />
+<!-- the property binding and string interpolation can be used interchangeably in some cases like below -->
+<p>{{ addProduct }}</p>
+<p [innerText]="addProduct"></p>
+
+<br /><br />
 <div product></div>
 <div product></div>
 <!-- Nested Components -->
